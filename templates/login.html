@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>login</title>
+</head>
+<body>
+	<form action="/login" method="post">
+		{% if log != 0 %}
+			<center><h2>{{ msg }}</h2></center>
+		{% endif %}
+
+		<table align="center" width="350" cellspacing="10">
+			<tr>
+				<td>
+					<label>Enter User Name:* </label>
+				</td>
+				<td>
+					<input onclick='/login' type="text" name="uname"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Enter Password* </label>
+				</td>
+				<td>
+					<input type="text" name="pass" oninvalid="" />
+				</td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="LOGIN"></td>
+			</tr>
+		</table>
+		<center><a href="/signup">Don't Have An Account</a></center>
+	</form>
+</body>
+</html>
